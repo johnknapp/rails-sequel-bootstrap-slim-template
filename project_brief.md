@@ -10,3 +10,4 @@
    1. Standard controller and rails views
    1. Use all 7 rails standard restful routes
    1. Use slim (not erb) in the views
+1. Push daily to `dev` branch on this repository
