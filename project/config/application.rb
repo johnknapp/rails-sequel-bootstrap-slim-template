@@ -21,6 +21,10 @@ module Project
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    config.generators do |g|
+      g.template_engine = :slim
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -55,7 +59,7 @@ module Project
     # config.sequel.load_database_tasks = false
 
     # This setting disabled the automatic connect after Rails init
-    config.sequel.skip_connect = true
+    config.sequel.skip_connect = false
 
     # Configure if Sequel should try to 'test' the database connection in order
     # to fail early

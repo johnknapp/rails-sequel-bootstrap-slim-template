@@ -112,6 +112,10 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    orm_adapter-sequel (0.1.0)
+      activemodel (>= 3.0.0)
+      orm_adapter (>= 0.4.0)
+      sequel (>= 3.18.0)
     pg (1.2.3)
     public_suffix (4.0.6)
     puma (5.4.0)
@@ -174,11 +178,22 @@ GEM
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     sequel (5.47.0)
+    sequel-devise (0.0.13)
+      devise
+      orm_adapter-sequel
+      sequel (>= 3.11.0)
     sequel-rails (1.1.1)
       actionpack (>= 4.0.0)
       activemodel (>= 4.0.0)
       railties (>= 4.0.0)
       sequel (>= 3.28, < 6.0)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    slim-rails (3.3.0)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (>= 3.0, < 5.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -188,6 +203,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -225,7 +241,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-  devise
+  devise (~> 4.7)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg
@@ -234,7 +250,9 @@ DEPENDENCIES
   rails (~> 6.1.4)
   sass-rails (>= 6)
   selenium-webdriver
+  sequel-devise
   sequel-rails
+  slim-rails
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
