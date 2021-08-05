@@ -1,0 +1,8 @@
+- if resource.errors.any?
+  #error_explanation
+    h2
+      = "Your activity is failed. Please check the errors below!"
+    ul
+      - resource.errors.full_messages.each do |message|
+        li
+          = message

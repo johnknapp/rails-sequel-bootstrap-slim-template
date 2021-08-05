@@ -1,0 +1,11 @@
+form action="/blogs" method="post"
+  div
+    label title:
+    input id="blog_title" name="blog[title]" type="text"
+  div
+    label text:
+    input id="blog_text" name="blog[text]" type="text"
+  div
+    label category:
+    input id="blog_category" name="blog[category]" type="number"
+  input name="commit" type="submit" value="save"
