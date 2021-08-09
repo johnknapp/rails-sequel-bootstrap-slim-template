@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create \
+  email: "admin@gmail.com",
+  password: "testpwd",
+  password_confirmation: "testpwd"
+
+10.times do
+  Blog.create \
+    title: Faker::Commerce.product_name,
+    text: Faker::Lorem.sentence,
+    category: rand(1..5)
+end
